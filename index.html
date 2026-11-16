@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Nicholas Knopp Seferin da Silva — Análise e Desenvolvimento de Sistemas e Ciência de Dados. Porto Alegre, RS." />
+  <meta name="author" content="Nicholas Knopp Seferin da Silva" />
+  <title>Nicholas Knopp — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB</text></svg>" />
+</head>
+<body>
+  <!-- Fundo decorativo -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Cabecalho -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#hero" class="brand" aria-label="Início">
+        <span class="brand-mark"><img src="./imagem/Nicholas.jpeg" width="40" height="40">
+        </span>
+        <span class="brand-text">Nicholas<span class="accent">.</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#formacao" class="nav-link">Formação</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#cursos" class="nav-link">Cursos</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="7" y2="7"/><line x1="17" y1="17" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="7" y2="17"/><line x1="17" y1="7" x2="19.1" y2="4.9"/></g></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="pill">
+            <span class="dot"></span> Disponível para Trabalhar
+          </span>
+          <h1 class="hero-title">
+            Olá, sou <span class="gradient-text">Nicholas Knopp</span>
+          </h1>
+          <p class="hero-role">
+            <span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-desc">
+            Graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> e pós-graduando em
+            <strong>Ciência de Dados</strong>. Apaixonado por lógica de programação, análise de dados
+            e ferramentas de inteligência de negócios.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">
+              Fale comigo
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#cursos" class="btn btn-ghost">Ver cursos</a>
+            <button type="button" class="btn btn-ghost" id="downloadCv">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Baixar Currículo
+            </button>
+          </div>
+
+          <ul class="hero-meta">
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              Porto Alegre, RS
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              Pós-graduando em Ciência de Dados
+            </li>
+          </ul>
+
+          <p class="print-contact">knoppnicholas4@gmail.com · (51) 99900-0061 · Porto Alegre, RS</p>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orbit">
+            <div class="avatar">
+              <img src="imagem/Nicholas.jpeg" alt="Foto de Nicholas Knopp Seferin da Silva" />
+            </div>
+            <span class="chip chip-1">Python</span>
+            <span class="chip chip-2">Power BI</span>
+            <span class="chip chip-3">SQL</span>
+            <span class="chip chip-4">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">01 — Sobre</span>
+          <h2 class="section-title">Quem sou eu</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela Faculdade Senac
+              e atualmente pós-graduando em <strong>Ciência de Dados</strong>. Tenho sólida base prática
+              em lógica de programação, manipulação de dados e ferramentas de inteligência de negócios.
+            </p>
+            <p>
+              Busco uma oportunidade de <strong>trabalhar na área de informática</strong>, com o objetivo de
+              desenvolver minhas habilidades profissionais e contribuir com dedicação e vontade de aprender
+              para o crescimento da empresa. Estou sempre aberto a novos horizontes e oportunidades de aprendizado.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <h3>Objetivo</h3>
+                <p>Trabalhar na área da informática / tecnologia</p>
+              </div>
+              <div class="info-card">
+                <h3>Localidade</h3>
+                <p>Porto Alegre — Rio Grande do Sul</p>
+              </div>
+            </div>
+
+            <div class="soft-skills">
+              <span class="tag">Trabalho em equipe</span>
+              <span class="tag">Boa comunicação</span>
+              <span class="tag">Organização</span>
+              <span class="tag">Pontualidade</span>
+              <span class="tag">Vontade de aprender</span>
+              <span class="tag">Análise de dados</span>
+            </div>
+          </div>
+
+          <aside class="stats reveal" aria-label="Resumo em números">
+            <div class="stat">
+              <strong data-count="30" data-suffix="+">0</strong>
+              <span>Cursos e certificados</span>
+            </div>
+            <div class="stat">
+              <strong data-count="2">0</strong>
+              <span>Formações Senac</span>
+            </div>
+            <div class="stat">
+              <strong data-count="10" data-suffix="+">0</strong>
+              <span>Tecnologias estudadas</span>
+            </div>
+            <div class="stat">
+              <strong data-count="2026" data-plain="true">0</strong>
+              <span>Estudos em andamento</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formacao -->
+    <section class="section" id="formacao">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">02 — Formação</span>
+          <h2 class="section-title">Formação acadêmica</h2>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">Cursando</span>
+              <h3>Pós-Graduação em Ciência de Dados</h3>
+              <p class="timeline-place">Faculdade Senac</p>
+              <p>Aprofundamento em análise de dados, estatística aplicada, machine learning e inteligência de negócios.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-period">2022 — 2025</span>
+              <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
+              <p class="timeline-place">Faculdade Senac</p>
+              <p>Formação completa em desenvolvimento de software, banco de dados, engenharia de requisitos e lógica de programação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">03 — Habilidades</span>
+          <h2 class="section-title">Tecnologias &amp; competências</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <h3>Linguagens &amp; programação</h3>
+              <span class="skill-icon">&lt;/&gt;</span>
+            </div>
+            <ul class="skill-list">
+              <li><span>Python</span><span class="bar"><i style="--w:85%"></i></span></li>
+              <li><span>JavaScript</span><span class="bar"><i style="--w:75%"></i></span></li>
+              <li><span>SQL / MySQL</span><span class="bar"><i style="--w:80%"></i></span></li>
+              <li><span>HTML5 &amp; CSS3</span><span class="bar"><i style="--w:88%"></i></span></li>
+              <li><span>Shell Script</span><span class="bar"><i style="--w:65%"></i></span></li>
+              <li><span>Java (Spring)</span><span class="bar"><i style="--w:60%"></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <h3>Dados &amp; BI</h3>
+              <span class="skill-icon">▤</span>
+            </div>
+            <ul class="skill-list">
+              <li><span>Power BI</span><span class="bar"><i style="--w:78%"></i></span></li>
+              <li><span>Excel Essencial</span><span class="bar"><i style="--w:82%"></i></span></li>
+              <li><span>Google Sheets</span><span class="bar"><i style="--w:80%"></i></span></li>
+              <li><span>Machine Learning</span><span class="bar"><i style="--w:62%"></i></span></li>
+              <li><span>Análise de dados</span><span class="bar"><i style="--w:75%"></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <h3>Front-end &amp; design</h3>
+              <span class="skill-icon">◈</span>
+            </div>
+            <ul class="skill-list">
+              <li><span>React JS</span><span class="bar"><i style="--w:68%"></i></span></li>
+              <li><span>Bootstrap</span><span class="bar"><i style="--w:78%"></i></span></li>
+              <li><span>CSS Flexbox / Responsivo</span><span class="bar"><i style="--w:82%"></i></span></li>
+              <li><span>UX Design (fundamentos)</span><span class="bar"><i style="--w:65%"></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <h3>Ferramentas &amp; boas práticas</h3>
+              <span class="skill-icon">⚙</span>
+            </div>
+            <ul class="skill-list">
+              <li><span>Git / Versionamento</span><span class="bar"><i style="--w:70%"></i></span></li>
+              <li><span>Postman / Teste de APIs</span><span class="bar"><i style="--w:72%"></i></span></li>
+              <li><span>Cypress (automação de testes)</span><span class="bar"><i style="--w:64%"></i></span></li>
+              <li><span>Modelagem UML</span><span class="bar"><i style="--w:70%"></i></span></li>
+              <li><span>Segurança da Informação</span><span class="bar"><i style="--w:68%"></i></span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cursos -->
+    <section class="section" id="cursos">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">04 — Cursos</span>
+          <h2 class="section-title">Cursos e certificados</h2>
+          <p class="section-sub">Mais de 30 cursos concluídos entre formações técnicas, dados, front-end e idiomas.</p>
+        </header>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar cursos por categoria">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="dados" role="tab" aria-selected="false">Dados &amp; BI</button>
+          <button class="filter" data-filter="dev" role="tab" aria-selected="false">Programação</button>
+          <button class="filter" data-filter="web" role="tab" aria-selected="false">Front-end</button>
+          <button class="filter" data-filter="idiomas" role="tab" aria-selected="false">Idiomas</button>
+          <button class="filter" data-filter="outros" role="tab" aria-selected="false">Outros</button>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Cursos recentes -->
+          <article class="course-card reveal" data-cat="dados">
+            <span class="course-cat">Dados &amp; BI</span>
+            <h3>Microsoft Excel Essencial</h3>
+            <p>03h01min + 14 exercícios</p>
+            <time>Set 2026</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Programação em Python</h3>
+            <p>04h30min + 19 exercícios</p>
+            <time>Set 2026</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dados">
+            <span class="course-cat">Dados &amp; BI</span>
+            <h3>MySQL</h3>
+            <p>07h51min + 17 exercícios</p>
+            <time>Jul — Ago 2026</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dados">
+            <span class="course-cat">Dados &amp; BI</span>
+            <h3>Power BI Básico com Machine Learning</h3>
+            <p>Didática Tech • 01h56min</p>
+            <time>Mar 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Cypress na Automação de Testes de Software</h3>
+            <p>QA Hacks e Dicas • 01h47min</p>
+            <time>Mar 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Shell Script</h3>
+            <p>Programação e Hacking • 01h42min</p>
+            <time>Jan 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Lógica de Programação</h3>
+            <p>App Inventor Brasil • 01h10min</p>
+            <time>Jan 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>Testando APIs com Postman</h3>
+            <p>Perssonizando • 01h40min</p>
+            <time>Mai 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>MicroServices na Prática com Java Spring</h3>
+            <p>Michelli Brito • 01h55min</p>
+            <time>2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Modelagem de Software com UML</h3>
+            <p>Bóson Treinamentos • 01h32min</p>
+            <time>Mai 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>Design Responsivo para Sites</h3>
+            <p>Node Studio Treinamentos • 01h16min</p>
+            <time>Mai 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>React JS</h3>
+            <p>queroser.ninja • 01h22min</p>
+            <time>Jan — Fev 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>CSS Flexbox no Desenvolvimento de Sites</h3>
+            <p>Node Studio Treinamentos • 01h18min</p>
+            <time>Jan 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>Estilização de Sites com Bootstrap</h3>
+            <p>Bootstrap Total • 03h10min</p>
+            <time>Out — Nov 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="web">
+            <span class="course-cat">Front-end</span>
+            <h3>Fundamentos de UX Design</h3>
+            <p>UXNOW • 02h17min</p>
+            <time>Out 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Programação em Python</h3>
+            <p>DD Tutoriais • 04h30min</p>
+            <time>Set 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="outros">
+            <span class="course-cat">Outros</span>
+            <h3>Segurança da Informação Básico</h3>
+            <p>Password • 01h22min</p>
+            <time>Set 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="outros">
+            <span class="course-cat">Outros</span>
+            <h3>Windows MS-DOS</h3>
+            <p>Vídeos de TI • 01h10min</p>
+            <time>Set 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="dev">
+            <span class="course-cat">Programação</span>
+            <h3>Jornada Zero ao Programador Contratado</h3>
+            <p>Dev em Dobro • 10h • projeto com HTML, CSS e JavaScript</p>
+            <time>Set — Out 2023</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="outros">
+            <span class="course-cat">Outros</span>
+            <h3>Informática Básica</h3>
+            <p>CCO • 01h36min</p>
+            <time>Jan 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="outros">
+            <span class="course-cat">Outros</span>
+            <h3>Gestão Ambiental e ISO 14001</h3>
+            <p>Focel Educação Gerencial • 01h12min</p>
+            <time>Jan 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="outros">
+            <span class="course-cat">Outros</span>
+            <h3>Macros para LibreOffice</h3>
+            <p>Aprendendo com Vídeos • 01h39min</p>
+            <time>Mai 2024</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="idiomas">
+            <span class="course-cat">Idiomas</span>
+            <h3>Inglês Instrumental</h3>
+            <p>UFMS • 01h48min</p>
+            <time>Mar 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="idiomas">
+            <span class="course-cat">Idiomas</span>
+            <h3>Inglês para Hotelaria e Restaurantes</h3>
+            <p>Link English • 01h36min</p>
+            <time>Mar 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="idiomas">
+            <span class="course-cat">Idiomas</span>
+            <h3>Inglês 1</h3>
+            <p>Teacher Silvio • 01h44min</p>
+            <time>Mar 2025</time>
+          </article>
+
+          <article class="course-card reveal" data-cat="idiomas">
+            <span class="course-cat">Idiomas</span>
+            <h3>Inglês para Garçom</h3>
+            <p>Spark English • 01h07min</p>
+            <time>Mar 2025</time>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">05 — Projetos</span>
+          <h2 class="section-title">Projetos em destaque</h2>
+          <p class="section-sub">Alguns trabalhos que desenvolvi durante a formação e os estudos. Todos com código aberto no GitHub.</p>
+        </header>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar projetos por área">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="web" role="tab" aria-selected="false">Web</button>
+          <button class="filter" data-filter="dados" role="tab" aria-selected="false">Dados</button>
+          <button class="filter" data-filter="python" role="tab" aria-selected="false">Python</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-cat="web">
+            <div class="project-top">
+              <span class="project-badge">Web</span>
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </span>
+            </div>
+            <h3>Dosefy — Gestão de Medicamentos</h3>
+            <p>Sistema web para gestão de medicamentos pessoais, com cadastro, controle de estoque, histórico de uso e geração de relatórios.</p>
+            <ul class="tech">
+              <li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <p class="project-note">Projeto de Desenvolvimento 2 — Análise e Desenvolvimento de Sistemas</p>
+            <a class="project-cta" href="https://github.com/Nicholasknopp/Projeto_de_Desenvolvimento_2-Final" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-cat="dados">
+            <div class="project-top">
+              <span class="project-badge">Dados</span>
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </span>
+            </div>
+            <h3>Análise de Dados — Pokémon</h3>
+            <p>Análise exploratória da base de estatísticas de Pokémon (Kaggle), desenvolvida nas etapas 2 e 3 do projeto, com foco em manipulação e visualização de dados.</p>
+            <ul class="tech">
+              <li>Python</li><li>Jupyter Notebook</li><li>Análise de Dados</li>
+            </ul>
+            <a class="project-cta" href="https://github.com/Nicholasknopp/Projeto-etapa-2-e-3" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-cat="dados">
+            <div class="project-top">
+              <span class="project-badge">Banco de Dados</span>
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </span>
+            </div>
+            <h3>Banco de Dados (MySQL)</h3>
+            <p>Repositório com arquivos e scripts de banco de dados MySQL, contemplando criação de tabelas e consultas SQL.</p>
+            <ul class="tech">
+              <li>MySQL</li><li>SQL</li>
+            </ul>
+            <a class="project-cta" href="https://github.com/Nicholasknopp/Banco_dados" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-cat="web">
+            <div class="project-top">
+              <span class="project-badge">Web</span>
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </span>
+            </div>
+            <h3>One Piece — Landing Page</h3>
+            <p>Aplicação web criada na semana "Do Zero ao Programador Contratado" (Set/2023), um treinamento intensivo de 10 horas com HTML, CSS e JavaScript.</p>
+            <ul class="tech">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <a class="project-cta" href="https://github.com/Nicholasknopp/One-Piece" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-cat="python">
+            <div class="project-top">
+              <span class="project-badge">Python</span>
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              </span>
+            </div>
+            <h3>Agenda Telefônica</h3>
+            <p>Projeto desenvolvido no curso de Programação em Python: uma agenda telefônica com cadastro e consulta de contatos.</p>
+            <ul class="tech">
+              <li>Python</li>
+            </ul>
+            <a class="project-cta" href="https://github.com/Nicholasknopp/pythonDD/tree/main/ProjetoDD.py" target="_blank" rel="noopener noreferrer">
+              Ver no GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="projects-more reveal">
+          <a class="btn btn-ghost" href="https://github.com/Nicholasknopp" target="_blank" rel="noopener noreferrer">
+            Ver todos os repositórios no GitHub
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">06 — Contato</span>
+          <h2 class="section-title">Vamos conversar</h2>
+          <p class="section-sub">Aberto a oportunidades de trabalhar e projetos na área de tecnologia e dados.</p>
+        </header>
+
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="mailto:knoppnicholas4@gmail.com">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="contact-label">E-mail</span>
+            <span class="contact-value">knoppnicholas4@gmail.com</span>
+          </a>
+
+          <a class="contact-card reveal" href="tel:+5551999000061">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3A2.6 2.6 0 0 1 18.4 20 15.4 15.4 0 0 1 4 5.6 2.6 2.6 0 0 1 6.6 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="contact-label">Telefone</span>
+            <span class="contact-value">(51) 99900-0061</span>
+          </a>
+
+          <div class="contact-card reveal">
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+            <span class="contact-label">Localização</span>
+            <span class="contact-value">Porto Alegre — RS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Nicholas Knopp Seferin da Silva. Feito com dedicação.</p>
+      <a href="#hero" class="back-top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
